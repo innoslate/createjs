@@ -6657,7 +6657,7 @@ createjs.deprecate = function(fallbackMethod, name) {
    * @return {String} The image data url for the cache.
    **/
   p.getCacheDataURL = function() {
-    return this.bitmapCache?this.bitmapCache.getDataURL():null;
+    return this.bitmapCache?this.bitmapCache.getCacheDataURL():null;
   };
 
   /**
