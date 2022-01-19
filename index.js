@@ -26,7 +26,7 @@
 * OTHER DEALINGS IN THE SOFTWARE.
 */
 
-let createjs = {};
+window.createjs = window.createjs||{};
 
 //##############################################################################
 // extend.js
