@@ -8156,7 +8156,7 @@ createjs.deprecate = function(fallbackMethod, name) {
     if (this.tickOnUpdate) { this.tick(props); }
     if (this.dispatchEvent("drawstart", false, true) === false) { return; }
     createjs.DisplayObject._snapToPixelEnabled = this.snapToPixelEnabled;
-    var r = this.drawRect, ctx = this.canvas.getContext("2d");
+    var r = this.drawRect, ctx = this.canvas.getContext("2d", {willReadFrequently: true});
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     if (this.autoClear) {
       if (r) { ctx.clearRect(r.x, r.y, r.width, r.height); }
